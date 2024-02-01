@@ -1,0 +1,52 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "lab_clinicas_core",
+            "cwd": "lab_clinicas_core",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "lab_clinicas_core (profile mode)",
+            "cwd": "lab_clinicas_core",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lab_clinicas_core (release mode)",
+            "cwd": "lab_clinicas_core",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "lab_clinicas_self_service DEV",
+            "cwd": "lab_clinicas_self_service",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define-from-file",
+                ".config/env.json"
+            ]
+        },
+        {
+            "name": "lab_clinicas_self_service (profile mode)",
+            "cwd": "lab_clinicas_self_service",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lab_clinicas_self_service (release mode)",
+            "cwd": "lab_clinicas_self_service",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
