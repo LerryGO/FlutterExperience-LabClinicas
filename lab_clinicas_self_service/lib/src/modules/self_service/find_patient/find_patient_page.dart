@@ -5,6 +5,7 @@ import 'package:flutter_getit/flutter_getit.dart';
 import 'package:lab_clinicas_core/lab_clinicas_core.dart';
 import 'package:lab_clinicas_self_service/src/modules/self_service/find_patient/find_patient_controller.dart';
 import 'package:lab_clinicas_self_service/src/modules/self_service/self_service_controller.dart';
+import 'package:lab_clinicas_self_service/src/modules/self_service/widget/lab_clinicas_self_services_app_bar.dart';
 import 'package:signals_flutter/signals_flutter.dart';
 import 'package:validatorless/validatorless.dart';
 
@@ -39,24 +40,7 @@ class _FindPatientPageState extends State<FindPatientPage>
   Widget build(BuildContext context) {
     final sizeOf = MediaQuery.sizeOf(context);
     return Scaffold(
-        appBar: LabClinicasAppBar(
-          actions: [
-            PopupMenuButton(
-              child: const IconPopupMenuWidget(),
-              itemBuilder: (context) {
-                return [
-                  const PopupMenuItem(
-                    value: 1,
-                    child: Text('Reiniciar processo'),
-                  )
-                ];
-              },
-              onSelected: (value) async {
-                Injector.get<SelfServiceController>().restartProccess();
-              },
-            )
-          ],
-        ),
+        appBar: LabClinicasSelfServicesAppBar(),
         body: LayoutBuilder(
           builder: (_, constraints) {
             return SingleChildScrollView(

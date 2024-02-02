@@ -49,25 +49,33 @@ final class LabClinicasTheme {
         ),
       ),
     ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        backgroundColor: Colors.white,
+        side: const BorderSide(
+          color: blueColor,
+        ),
+        foregroundColor: blueColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        textStyle: const TextStyle(
+          fontFamily: 'Montserrat',
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
   );
 
   static final darkTheme = lightTheme;
 
-  static const titleStyle = TextStyle(
-    color: blueColor,
-    fontSize: 32,
-    fontWeight: FontWeight.w900
-  );
+  static const titleStyle =
+      TextStyle(color: blueColor, fontSize: 32, fontWeight: FontWeight.w900);
 
-  static const titleSmallStyle = TextStyle(
-    color: blueColor,
-    fontSize: 24,
-    fontWeight: FontWeight.w900
-  );
+  static const titleSmallStyle =
+      TextStyle(color: blueColor, fontSize: 24, fontWeight: FontWeight.w900);
 
-  static const subtitleSmallStyle = TextStyle(
-    color: blueColor,
-    fontSize: 18,
-    fontWeight: FontWeight.w500
-  );
+  static const subtitleSmallStyle =
+      TextStyle(color: blueColor, fontSize: 18, fontWeight: FontWeight.w500);
 }
