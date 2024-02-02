@@ -9,11 +9,16 @@ import 'package:lab_clinicas_self_service/src/modules/self_service/patient/patie
 import 'package:lab_clinicas_self_service/src/modules/self_service/self_service_controller.dart';
 import 'package:lab_clinicas_self_service/src/modules/self_service/self_service_page.dart';
 import 'package:lab_clinicas_self_service/src/modules/self_service/who_i_am/who_i_am_page.dart';
+import 'package:lab_clinicas_self_service/src/repositories/patients/patient_repository.dart';
+import 'package:lab_clinicas_self_service/src/repositories/patients/patient_repository_impl.dart';
 
 class SelfServiceModule extends FlutterGetItModule {
   @override
-  List<Bind<Object>> get bindings =>
-      [Bind.lazySingleton((i) => SelfServiceController())];
+  List<Bind<Object>> get bindings => [
+        Bind.lazySingleton((i) => SelfServiceController()),
+        Bind.lazySingleton<PatientRepository>(
+            (i) => PatientRepositoryImpl(restClient: i())),
+      ];
 
   @override
   String get moduleRouteName => '/self-service';
