@@ -341,12 +341,13 @@ class _PatientPageState extends State<PatientPage>
                           child: SizedBox(
                             height: 48,
                             child: ElevatedButton(
-                                onPressed: () {
-                                  controller.patient =
-                                      selfServiceController.model.patient;
-                                  controller.goNextStep();
-                                },
-                                child: const Text('Continuar')),
+                              onPressed: () {
+                                controller.patient =
+                                    selfServiceController.model.patient;
+                                controller.goNextStep();
+                              },
+                              child: const Text('Continuar'),
+                            ),
                           ),
                         ),
                       ],

@@ -10,12 +10,12 @@ broadcastProvider: socket
 idType: uuid
 
 auth:
-  jwtSecret: cwsMXDtuP447WZQ63nM4dWZ3RppyMl
-  jwtExpire: 3600
-  urlSkip:
-    - /images/:
-        method: get
-    - /users:
-        method: post
-    - /adm_users:
-        method: post
+    jwtSecret: cwsMXDtuP447WZQ63nM4dWZ3RppyMl
+    jwtExpire: 3600
+    urlSkip:
+        - /images/:
+              method: get
+        - /users:
+              method: post
+        - /adm_users:
+              method: post
