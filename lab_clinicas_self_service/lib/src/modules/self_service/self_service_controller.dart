@@ -14,7 +14,7 @@ enum FormSteps {
 }
 
 class SelfServiceController with MessageStateMixin {
-  final _step = ValueSignal(
+  final _step = Signal(
     FormSteps.none,
   );
 
@@ -24,16 +24,16 @@ class SelfServiceController with MessageStateMixin {
   FormSteps get step => _step();
 
   void startProcess() {
-    _step.forceUpdate(FormSteps.whoIAm);
+    _step.set(FormSteps.whoIAm, force: true);
   }
 
   void goPatient() {
-    _step.forceUpdate(FormSteps.patient);
+    _step.set(FormSteps.patient, force: true);
   }
 
   void setWhoIAmDataStepAndNext(String name, String lastName) {
     _model = _model.copyWith(name: () => name, lastName: () => lastName);
-    _step.forceUpdate(FormSteps.findPatient);
+    _step.set(FormSteps.findPatient, force: true);
   }
 
   void clearForm() {
@@ -42,11 +42,11 @@ class SelfServiceController with MessageStateMixin {
 
   void goToFormPatient(PatientModel? patient) {
     _model = _model.copyWith(patient: () => patient);
-    _step.forceUpdate(FormSteps.patient);
+    _step.set(FormSteps.patient, force: true);
   }
 
   void restartProccess() {
-    _step.forceUpdate(FormSteps.restart);
+    _step.set(FormSteps.restart, force: true);
     clearForm();
   }
 
@@ -54,7 +54,7 @@ class SelfServiceController with MessageStateMixin {
     _model = _model.copyWith(
       patient: () => patient,
     );
-    _step.forceUpdate(FormSteps.documents);
+    _step.set(FormSteps.documents, force: true);
   }
 
   void registerDocument(DocumentType type, String filePath) {
