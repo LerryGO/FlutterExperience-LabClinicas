@@ -4,6 +4,7 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        // CORE
         {
             "name": "lab_clinicas_core",
             "cwd": "lab_clinicas_core",
@@ -24,6 +25,7 @@
             "type": "dart",
             "flutterMode": "release"
         },
+        // SELF SERVICE
         {
             "name": "lab_clinicas_self_service DEV",
             "cwd": "lab_clinicas_self_service",
@@ -47,6 +49,31 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
-        }
+        },
+        // ADM
+        {
+            "name": "lab_clinicas_adm DEV",
+            "cwd": "lab_clinicas_adm",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define-from-file",
+                ".config/env.json"
+            ]
+        },
+        {
+            "name": "lab_clinicas_adm (profile mode)",
+            "cwd": "lab_clinicas_adm",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lab_clinicas_adm (release mode)",
+            "cwd": "lab_clinicas_adm",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
     ]
 }

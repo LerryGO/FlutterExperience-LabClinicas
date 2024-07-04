@@ -1,4 +1,4 @@
-name: lab_clinicas_self_service
+name: lab_clinicas_adm
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -19,7 +19,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.2.5 <4.0.0"
+  sdk: ">=3.4.3 <4.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -33,20 +33,15 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-  flutter_getit: ^2.0.0
+  cupertino_icons: ^1.0.6
   lab_clinicas_core:
     path: ../lab_clinicas_core
+  flutter_getit: ^2.0.0
   asyncstate: ^2.1.1-dev.1
-  dotted_border: ^2.1.0
-  validatorless: ^1.2.3
-  signals_flutter: ^5.2.2
-
-  dio: ^5.5.0
+  dio: ^5.5.0+1
   shared_preferences: ^2.2.3
-  json_annotation: ^4.9.0
-  brasil_fields: ^1.15.0
-  camera: ^0.11.0
+  signals_flutter: ^5.2.2
+  validatorless: ^1.2.3
 
 dev_dependencies:
   flutter_test:
@@ -57,9 +52,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
-  json_serializable: ^6.7.1
-  build_runner: ^2.4.8
+  flutter_lints: ^3.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
