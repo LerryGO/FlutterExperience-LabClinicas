@@ -1,7 +1,5 @@
 import 'package:asyncstate/asyncstate.dart';
 import 'package:lab_clinicas_core/lab_clinicas_core.dart';
-
-
 import 'package:signals_flutter/signals_flutter.dart';
 
 import '../../services/login/user_login_service.dart';
@@ -24,7 +22,7 @@ class LoginController with MessageStateMixin {
   Future<void> login(String email, String password) async {
     final loginResult =
         await _loginService.execute(email, password).asyncLoader();
-        
+
     switch (loginResult) {
       case Left(value: ServiceException(:final message)):
         // mostrar o erro

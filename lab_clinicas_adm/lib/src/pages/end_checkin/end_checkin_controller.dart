@@ -1,4 +1,3 @@
-
 import 'package:lab_clinicas_core/lab_clinicas_core.dart';
 import 'package:signals_flutter/signals_flutter.dart';
 
@@ -12,7 +11,7 @@ class EndCheckinController with MessageStateMixin {
       : _callNextPatientService = callNextPatientService;
 
   Future<void> callNextPatient() async {
-    final result = _callNextPatientService.execute();
+    final result = await _callNextPatientService.execute();
     switch (result) {
       case Left():
         showError('Erro ao chamar o próximo paciente');

@@ -62,16 +62,17 @@ class _EndCheckinPageState extends State<EndCheckinPage> with MessageViewMixin {
                 height: 80,
               ),
               SizedBox(
-                  width: double.infinity,
-                  height: 48,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      controller.callNextPatient();
-                    },
-                    child: const Text(
-                      'CHAMAR OUTRA SENHA',
-                    ),
-                  )),
+                width: double.infinity,
+                height: 48,
+                child: ElevatedButton(
+                  onPressed: () {
+                    controller.callNextPatient();
+                  },
+                  child: const Text(
+                    'CHAMAR OUTRA SENHA',
+                  ),
+                ),
+              ),
             ],
           ),
         ),
