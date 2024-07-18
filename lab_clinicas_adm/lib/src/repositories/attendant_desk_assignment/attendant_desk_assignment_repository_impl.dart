@@ -60,4 +60,20 @@ class AttendantDeskAssignmentRepositoryImpl
     }
     return null;
   }
+
+  @override
+  Future<Either<RepositoryException, int>> getDeskAssignment() async {
+    try {
+      final Response(data: List(first: data)) = await restClient.auth.get(
+        '/attendantDeskAssignment',
+        queryParameters: {
+          'user_id': '#userAuthRef',
+        },
+      );
+      return Right(data['desk_number']);
+    } on DioException catch (e, s) {
+      log('Erro ao buscar número do guichê', error: e, stackTrace: s);
+      return Left(RepositoryException());
+    }
+  }
 }
