@@ -13,12 +13,20 @@
             "password": "123123"
         }
     ],
-    "attendantDeskAssignment": [],
+    "attendantDeskAssignment": [
+        {
+            "id": "c90cc230-0b1f-1094-8193-45aa21da8a9f",
+            "user_id": "b52bc480-fbee-1e87-a5bf-4f8239c52458",
+            "desk_number": 4,
+            "date_created": "2024-07-18T16:13:36.858692",
+            "status": "Available"
+        }
+    ],
     "patients": [
         {
             "id": "c2531240-6d2a-1e8e-aec4-01699acca6d1",
-            "name": "Rodrigo Rahman",
-            "email": "rodrigorahman@academiadoflutter.com.br",
+            "name": "Lerry Augusto Pirani",
+            "email": "lerry@gmail.com",
             "phone_number": "(11) 1231212312",
             "document": "123.123.123-12",
             "address": {
@@ -43,7 +51,33 @@
                 "/storage/owsiclmt_jrs_1720041417762.jpg",
                 "/storage/awsbccsf_jrs_1720041432936.jpg"
             ],
-            "password": "Lerry teste1",
+            "password": "Lerry Augusto",
+            "date_created": "2024-07-03T21:17:32.366842",
+            "status": "Waiting",
+            "tests": []
+        },
+        {
+            "id": "fe6a86c0-43b4-1066-882b-37c1af8b0d2d1",
+            "patient_id": "c2531240-6d2a-1e8e-aec4-01699acca6d1",
+            "health_insurance_card": "/storage/iefwhkmo_jrs_1720041411818.jpg",
+            "medical_order": [
+                "/storage/owsiclmt_jrs_1720041417762.jpg",
+                "/storage/awsbccsf_jrs_1720041432936.jpg"
+            ],
+            "password": "Rodrigo",
+            "date_created": "2024-07-03T21:17:32.366842",
+            "status": "Waiting",
+            "tests": []
+        },
+        {
+            "id": "fe6a86c0-43b4-1066-882b-37c1af8b0d2d2",
+            "patient_id": "c2531240-6d2a-1e8e-aec4-01699acca6d1",
+            "health_insurance_card": "/storage/iefwhkmo_jrs_1720041411818.jpg",
+            "medical_order": [
+                "/storage/owsiclmt_jrs_1720041417762.jpg",
+                "/storage/awsbccsf_jrs_1720041432936.jpg"
+            ],
+            "password": "Matheus",
             "date_created": "2024-07-03T21:17:32.366842",
             "status": "Waiting",
             "tests": []

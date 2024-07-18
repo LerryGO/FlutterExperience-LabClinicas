@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:lab_clinicas_core/lab_clinicas_core.dart';
+import 'package:signals_flutter/signals_flutter.dart';
 import 'package:validatorless/validatorless.dart';
 
 import 'home_controller.dart';
@@ -21,6 +22,14 @@ class _HomePageState extends State<HomePage> with MessageViewMixin {
   @override
   void initState() {
     messageListener(controller);
+    effect(() {
+      if (controller.informationForm != null) {
+        Navigator.of(context).pushReplacementNamed(
+          '/pre-checkin',
+          arguments: controller.informationForm,
+        );
+      }
+    });
     super.initState();
   }
 

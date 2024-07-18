@@ -61,7 +61,7 @@ class PatientInformationFormRepositoryImpl
   }
 
   Future<Map<String, dynamic>> _getPatient(String id) async {
-    final Response(:data) = await restClient.auth.get('/patient/$id');
+    final Response(:data) = await restClient.auth.get('/patients/$id');
     return data;
   }
 }
