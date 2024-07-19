@@ -75,5 +75,30 @@
             "type": "dart",
             "flutterMode": "release"
         },
+        // Panel
+        {
+            "name": "lab_clinicas_panel DEV",
+            "cwd": "lab_clinicas_panel",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define-from-file",
+                ".config/env.json"
+            ]
+        },
+        {
+            "name": "lab_clinicas_panel (profile mode)",
+            "cwd": "lab_clinicas_panel",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lab_clinicas_panel (release mode)",
+            "cwd": "lab_clinicas_panel",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
     ]
 }
