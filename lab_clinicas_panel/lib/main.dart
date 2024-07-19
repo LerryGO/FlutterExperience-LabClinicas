@@ -22,6 +22,10 @@ class LabClinicasPanelApp extends StatelessWidget {
           page: (_) => const SplashPage(),
           path: '/',
         ),
+        FlutterGetItPageBuilder(
+          page: (_) => const SplashPage(),
+          path: '/home',
+        ),
       ],
       pages: const [
         LoginRouter(),
