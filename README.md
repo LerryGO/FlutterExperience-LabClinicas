@@ -1,3 +1,4 @@
+![LabClinicas](https://github.com/user-attachments/assets/5f9540c6-17d2-4c6b-b499-d9089f27ec77)
 # Flutter Experience - Lab Clínicas
 
 Projeto para uma clínica laboratorial para exames, onde temos um Totem de autoatendimento para cadastro de entradas de pacientes, área admnistrativa para guichês e atendimento e por fim uma tela web para mostrar as chamadas das senhas.
